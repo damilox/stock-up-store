@@ -13,7 +13,7 @@ export default function OrderModal({ isOpen, onClose }: { isOpen: boolean, onClo
   const handleFinalSubmit = () => {
     if (!details.name || !details.hostel) return alert("Please fill in your delivery details");
 
-    const phoneNumber = "234XXXXXXXXXX"; 
+    const phoneNumber = "2348102816015"; 
     const header = `*NEW ORDER - STOCKUP*%0A%0A*Name:* ${details.name}%0A*Hostel:* ${details.hostel}%0A%0A*Items:*%0A`;
     const itemsList = items.map(item => `- ${item.name}: ${item.quantity}`).join('%0A');
     

@@ -16,8 +16,26 @@ import {
   CheckCircle, 
   HelpCircle,
   AlertCircle,
-  Share2
+  Share2,
+  PlusCircle
 } from 'lucide-react';
+
+// RequestCard Component defined internally for convenience
+function RequestCard() {
+  return (
+    <div className="bg-white group rounded-[2.5rem] p-6 border-2 border-dashed border-green-200 flex flex-col items-center justify-center text-center hover:border-green-500 hover:bg-green-50 transition-all cursor-pointer min-h-[300px]"
+         onClick={() => window.open(`https://wa.me/234XXXXXXXXXX?text=Hello StockUp! 👋 I want to order something not on the list.`)}>
+      <div className="bg-green-100 p-4 rounded-full text-green-600 mb-4 group-hover:scale-110 transition-transform">
+        <PlusCircle size={40} />
+      </div>
+      <h3 className="font-black text-xl text-slate-800 tracking-tight">Don't see it?</h3>
+      <p className="text-sm text-slate-500 mt-2 font-medium">
+        Click here to tell us what you need from the market!
+      </p>
+      <span className="mt-4 text-xs font-black uppercase text-green-600 tracking-widest">Request Custom Item</span>
+    </div>
+  );
+}
 
 export default function Home() {
   const items = useCart((state) => state.items);
@@ -85,7 +103,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero Section (REVERTED) */}
+      {/* Hero Section */}
       <section className="relative overflow-hidden bg-white pt-10 pb-20 border-b border-slate-100">
         <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-green-50 rounded-full blur-3xl opacity-70"></div>
         <div className="max-w-4xl mx-auto px-6 relative z-10">
@@ -119,7 +137,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Referral Banner (REVERTED) */}
+      {/* Referral Banner */}
       <section className="max-w-4xl mx-auto px-6 -mt-8 relative z-30">
         <div className="bg-gradient-to-r from-green-700 to-green-500 rounded-[2.5rem] p-6 shadow-xl shadow-green-200 text-white flex flex-col md:flex-row items-center justify-between gap-6 border-4 border-white">
           <div className="flex items-center gap-4 text-center md:text-left">
@@ -182,9 +200,10 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Product Grid */}
+        {/* Product Grid with Permanent Request Card */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProducts.map((p) => <ProductCard key={p.id} {...p} />)}
+          <RequestCard />
         </div>
 
         {/* Empty State / Request Feature */}
@@ -229,7 +248,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Professional Footer (REVERTED TO PREVIOUS VERSION) */}
+        {/* Professional Footer */}
         <footer className="mt-32 bg-white border-t border-slate-100 pt-16 pb-8">
           <div className="max-w-4xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
