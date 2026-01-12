@@ -2,7 +2,7 @@ export const CATEGORIES = ["All", "Grains", "Proteins", "Tubers", "Oil & Spices"
 
 export const PRODUCTS = [
   // Grains
-  { id: '1', name: 'Local Rice', image: '/products/local-rice.jpg', category: 'Grains' },
+  { id: '1', name: 'Rice', image: '/products/local-rice.jpg', category: 'Grains' },
   { id: '2', name: 'Brown Beans', image: '/products/brown-beans.jpg', category: 'Grains' },
   { id: '3', name: 'Garri', image: '/products/garri.jpg', category: 'Grains' },
   
