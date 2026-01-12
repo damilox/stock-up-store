@@ -214,7 +214,7 @@ export default function Home() {
             <p className="text-slate-500 mt-2 mb-8 max-w-xs mx-auto font-medium">We can still source it for you! Just send a request.</p>
             <button 
               onClick={() => {
-                const phoneNumber = "234XXXXXXXXXX"; 
+                const phoneNumber = "2348102816015"; 
                 const msg = `Hello StockUp! 👋 I'm looking for *${searchTerm}* but couldn't find it on the site. Can you help me find it?`;
                 window.open(`https://wa.me/${phoneNumber}?text=${msg}`, '_blank');
               }}

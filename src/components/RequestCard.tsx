@@ -2,8 +2,6 @@
 import { PlusCircle } from 'lucide-react';
 
 export default function RequestCard() {
-  // We use the most basic link possible. 
-  // NO leading 0, NO plus sign. 234 + 8102816015
   const phoneNumber = "2348102816015";
   const message = "Hello StockUp! I want to order something not on the list.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
